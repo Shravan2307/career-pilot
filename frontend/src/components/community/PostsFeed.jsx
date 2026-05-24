@@ -168,6 +168,7 @@ export default function PostsFeed() {
     };
   }, [subscribe, subscribePosts, unsubscribePosts]);
 
+
   const handleCreatePost = async (postData) => {
     try {
       const data = await communityApi.createPost(postData);
