@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Mail,
   Phone,
@@ -23,6 +23,7 @@ export default function Contact() {
 
         {/* Left Content */}
         <div className="flex flex-col justify-center">
+
           <span className="mb-4 text-sm tracking-[0.3em] uppercase text-cyan-400">
             Contact Me
           </span>
@@ -44,6 +45,7 @@ export default function Contact() {
               <div className="p-3 rounded-xl bg-white/10 border border-white/20 backdrop-blur-xl">
                 <Mail className="text-cyan-400" />
               </div>
+
               <span className="text-gray-300">
                 hello@futureui.com
               </span>
@@ -53,6 +55,7 @@ export default function Contact() {
               <div className="p-3 rounded-xl bg-white/10 border border-white/20 backdrop-blur-xl">
                 <Phone className="text-pink-400" />
               </div>
+
               <span className="text-gray-300">
                 +91 98765 43210
               </span>
@@ -62,6 +65,7 @@ export default function Contact() {
               <div className="p-3 rounded-xl bg-white/10 border border-white/20 backdrop-blur-xl">
                 <MapPin className="text-purple-400" />
               </div>
+
               <span className="text-gray-300">
                 Chennai, India
               </span>
@@ -103,6 +107,7 @@ export default function Contact() {
             })}
 
           </div>
+
         </div>
 
         {/* Right Form */}
@@ -122,6 +127,7 @@ export default function Contact() {
             >
 
               <div>
+
                 <label className="sr-only">
                   Name
                 </label>
@@ -131,9 +137,11 @@ export default function Contact() {
                   placeholder="Your Name"
                   className="w-full px-5 py-4 rounded-2xl bg-black/30 border border-white/10 focus:border-cyan-400 outline-none text-white placeholder-gray-400"
                 />
+
               </div>
 
               <div>
+
                 <label className="sr-only">
                   Email
                 </label>
@@ -143,9 +151,11 @@ export default function Contact() {
                   placeholder="Your Email"
                   className="w-full px-5 py-4 rounded-2xl bg-black/30 border border-white/10 focus:border-pink-400 outline-none text-white placeholder-gray-400"
                 />
+
               </div>
 
               <div>
+
                 <label className="sr-only">
                   Message
                 </label>
@@ -155,6 +165,7 @@ export default function Contact() {
                   placeholder="Your Message"
                   className="w-full px-5 py-4 rounded-2xl bg-black/30 border border-white/10 focus:border-purple-400 outline-none text-white placeholder-gray-400 resize-none"
                 ></textarea>
+
               </div>
 
               <button
@@ -166,6 +177,7 @@ export default function Contact() {
               </button>
 
             </form>
+
           </div>
         </div>
       </div>
