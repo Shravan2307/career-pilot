@@ -12,7 +12,7 @@ import {
 export default function Contact() {
   return (
     <section className="relative w-full min-h-screen overflow-hidden bg-black text-white flex items-center justify-center px-6 py-20">
-      
+
       {/* Glow Background Effects */}
       <div className="absolute top-10 left-10 w-72 h-72 bg-cyan-500/20 blur-3xl rounded-full"></div>
       <div className="absolute bottom-10 right-10 w-80 h-80 bg-pink-500/20 blur-3xl rounded-full"></div>
@@ -20,7 +20,7 @@ export default function Contact() {
 
       {/* Main Container */}
       <div className="relative z-10 w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-10">
-        
+
         {/* Left Content */}
         <div className="flex flex-col justify-center">
           <span className="mb-4 text-sm tracking-[0.3em] uppercase text-cyan-400">
@@ -39,54 +39,93 @@ export default function Contact() {
 
           {/* Contact Info */}
           <div className="mt-10 space-y-5">
+
             <div className="flex items-center gap-4">
               <div className="p-3 rounded-xl bg-white/10 border border-white/20 backdrop-blur-xl">
                 <Mail className="text-cyan-400" />
               </div>
-              <span className="text-gray-300">hello@futureui.com</span>
+              <span className="text-gray-300">
+                hello@futureui.com
+              </span>
             </div>
 
             <div className="flex items-center gap-4">
               <div className="p-3 rounded-xl bg-white/10 border border-white/20 backdrop-blur-xl">
                 <Phone className="text-pink-400" />
               </div>
-              <span className="text-gray-300">+91 98765 43210</span>
+              <span className="text-gray-300">
+                +91 98765 43210
+              </span>
             </div>
 
             <div className="flex items-center gap-4">
               <div className="p-3 rounded-xl bg-white/10 border border-white/20 backdrop-blur-xl">
                 <MapPin className="text-purple-400" />
               </div>
-              <span className="text-gray-300">Chennai, India</span>
+              <span className="text-gray-300">
+                Chennai, India
+              </span>
             </div>
+
           </div>
 
           {/* Social Icons */}
           <div className="flex gap-5 mt-10">
-            {[Github, Linkedin, Instagram].map((Icon, index) => (
-              <div
-                key={index}
-                className="p-4 rounded-2xl bg-white/10 border border-white/20 backdrop-blur-xl hover:scale-110 hover:shadow-[0_0_30px_rgba(168,85,247,0.5)] transition-all duration-300 cursor-pointer"
-              >
-                <Icon size={22} />
-              </div>
-            ))}
+
+            {[
+              {
+                icon: Github,
+                link: "https://github.com/",
+              },
+              {
+                icon: Linkedin,
+                link: "https://linkedin.com/",
+              },
+              {
+                icon: Instagram,
+                link: "https://instagram.com/",
+              },
+            ].map((item, index) => {
+
+              const Icon = item.icon;
+
+              return (
+                <a
+                  key={index}
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-4 rounded-2xl bg-white/10 border border-white/20 backdrop-blur-xl hover:scale-110 hover:shadow-[0_0_30px_rgba(168,85,247,0.5)] transition-all duration-300 cursor-pointer"
+                >
+                  <Icon size={22} />
+                </a>
+              );
+            })}
+
           </div>
         </div>
 
         {/* Right Form */}
         <div className="relative">
+
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-3xl blur-xl opacity-30"></div>
 
           <div className="relative bg-white/10 border border-white/20 backdrop-blur-2xl rounded-3xl p-8 shadow-[0_0_40px_rgba(168,85,247,0.3)]">
-            
+
             <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-pink-400 bg-clip-text text-transparent">
               Send Message
             </h2>
 
-            <form className="space-y-6">
-              
+            <form
+              className="space-y-6"
+              onSubmit={(e) => e.preventDefault()}
+            >
+
               <div>
+                <label className="sr-only">
+                  Name
+                </label>
+
                 <input
                   type="text"
                   placeholder="Your Name"
@@ -95,6 +134,10 @@ export default function Contact() {
               </div>
 
               <div>
+                <label className="sr-only">
+                  Email
+                </label>
+
                 <input
                   type="email"
                   placeholder="Your Email"
@@ -103,6 +146,10 @@ export default function Contact() {
               </div>
 
               <div>
+                <label className="sr-only">
+                  Message
+                </label>
+
                 <textarea
                   rows="5"
                   placeholder="Your Message"
@@ -117,6 +164,7 @@ export default function Contact() {
                 <Send size={20} />
                 Send Message
               </button>
+
             </form>
           </div>
         </div>
