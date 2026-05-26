@@ -1,3 +1,10 @@
+# [1.26.0](https://github.com/anurag3407/career-pilot/compare/v1.25.0...v1.26.0) (2026-05-26)
+
+
+### Features
+
+* **jobs:** add Clear All Filters button to job search sidebar ([#1810](https://github.com/anurag3407/career-pilot/issues/1810)) ([fc848b9](https://github.com/anurag3407/career-pilot/commit/fc848b9ad320a678be4a6dc1954365e8807ed348))
+
 # [1.25.0](https://github.com/anurag3407/career-pilot/compare/v1.24.0...v1.25.0) (2026-05-26)
 
 
